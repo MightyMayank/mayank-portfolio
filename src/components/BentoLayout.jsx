@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { SiLeetcode } from "react-icons/si";
 import githubLogo from "../assets/github.svg";
 import linkedInLogo from "../assets/linkedin.svg";
-import xLogo from "../assets/x-logo.svg";
 import mailLogo from "../assets/mail.png";
 import resumeImage from "../assets/resume.svg";
 import backgroundImage from "../assets/profile.png";
 import setupImage from "../assets/setup.jpg";
 import fresherLogo from "../assets/experience/Fresher.svg";
 import contactme from '../assets/contact.jpg'
-import { email, github, linkedin, twitter, resume } from "../profileconfig";
+import { email, github, linkedin, leetcode, resume } from "../profileconfig";
 import ProjectModal from "./modals/ProjectModal";
 import ContactModal from "./modals/ContactModal";
 import ExperienceModal from "./modals/ExperienceModal";
@@ -160,14 +160,16 @@ const BentoLayout = ({ isDarkMode, toggleDarkMode }) => {
           </a>
         </div>
 
-        {/* X/Twitter */}
+        {/* LeetCode */}
         <div className="col-span-1 aspect-square rounded-xl border-transparent shadow-md overflow-hidden">
-          <a href={twitter} target="_blank" rel="noopener noreferrer">
-            <img
-              src={xLogo}
-              alt="X/Twitter Logo"
-              className="w-full h-full object-cover"
-            />
+          <a
+            href={leetcode}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Mayank's LeetCode profile"
+            className="flex h-full w-full items-center justify-center bg-[#1a1a1a]"
+          >
+            <SiLeetcode className="h-2/3 w-2/3 text-[#FFA116]" aria-hidden="true" />
           </a>
         </div>
 
@@ -192,9 +194,7 @@ const BentoLayout = ({ isDarkMode, toggleDarkMode }) => {
       {isModalOpen && <ProjectModal onClose={() => setIsModalOpen(false)} mode={isDarkMode} />}
 
       {/* Experience Modal */}
-      {experienceOpen && (
-        <ExperienceModal onClose={() => setExperienceOpen(false)} mode={isDarkMode} />
-      )}
+      {experienceOpen && (<ExperienceModal onClose={() => setExperienceOpen(false)} mode={isDarkMode} />)}
 
       {/*Contact form*/}
       {contactOpen && (

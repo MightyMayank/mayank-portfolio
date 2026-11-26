@@ -32,8 +32,10 @@ const ExperienceModal = (props) => {
           <section className="space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
-                <p className="text-xl font-semibold">VITOMIZE – Medical Startup</p>
-                <p className="text-sm text-gray-700 dark:text-gray-300">Role: AI – Software Developer</p>
+                <p className="text-xl font-semibold">Cyber Infrastructure Services (CIS)</p>
+                <p className={`text-sm ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
+                  Role: Junior Software Developer
+                </p>
               </div>
               <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                 isDarkMode
@@ -44,19 +46,21 @@ const ExperienceModal = (props) => {
                 Full-time
               </span>
             </div>
-            <ul className="list-disc list-inside space-y-2 text-sm leading-6 text-gray-900 dark:text-gray-500">
-              <li>Developed a real-time patient monitoring system utilizing medical electronics and WebSockets for continuous vital-sign tracking.</li>
-              <li>Implemented a self-deployable database to improve patient data management.</li>
-              <li>Engineered predictive algorithms to detect abnormalities in patient vitals and prioritize alerts.</li>
-              <li>Designed a token-based notification system that alerted doctors of critical conditions for timely medical intervention.</li>
+            <ul className={`list-disc list-inside space-y-2 text-sm leading-6 ${isDarkMode ? "text-gray-200" : "text-gray-800"}`}>
+              <li>Developed and maintained full-stack web applications from scratch using Python, Django, Django REST Framework, React.js, and PostgreSQL.</li>
+              <li>Designed relational database schemas and optimized SQL queries to improve backend performance and data integrity.</li>
+              <li>Engineered secure RESTful APIs with authentication and authorization, integrating them with responsive React frontend components.</li>
+              <li>Authored Functional Requirement Documents (FRDs), Non-Functional Requirement Documents (NFRDs), and technical planning specifications to align business requirements with development workflows.</li>
             </ul>
           </section>
 
           <section className="space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
-                <p className="text-xl font-semibold">OctaNet Services Pvt Ltd</p>
-                <p className="text-sm text-gray-700 dark:text-gray-300">Role: Python Intern</p>
+                <p className="text-xl font-semibold">Cyber Infrastructure Services (CIS)</p>
+                <p className={`text-sm ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}>
+                  Role: Software Development Intern
+                </p>
               </div>
               <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                 isDarkMode
@@ -64,14 +68,13 @@ const ExperienceModal = (props) => {
                   : "bg-blue-100 text-blue-700"
               }`}
               >
-                Internship
+                Internship · 6 Months
               </span>
             </div>
-            <ul className="list-disc list-inside space-y-2 text-sm leading-6 text-gray-900 dark:text-gray-500">
-              <li>Developed a transaction validation platform using Flask.</li>
-              <li>Implemented customer ID validation against account information.</li>
-              <li>Applied responsive design principles for cross-device compatibility.</li>
-              <li>Integrated encryption techniques to protect sensitive transaction data.</li>
+            <ul className={`list-disc list-inside space-y-2 text-sm leading-6 ${isDarkMode ? "text-gray-200" : "text-gray-800"}`}>
+              <li>Built and tested RESTful APIs using Python, Django, and Django REST Framework while collaborating with senior developers on feature delivery.</li>
+              <li>Assisted in database modeling, debugging backend logic, and validating API endpoints using Postman.</li>
+              <li>Participated in code reviews, requirement analysis, and sprint planning to maintain clean, scalable codebases.</li>
             </ul>
           </section>
         </div>

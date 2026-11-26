@@ -7,13 +7,20 @@ import 'react-awesome-slider/dist/styles.css';
 import Education from './EducationSection';
 
 const Slider = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(() => {
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        return savedTheme ? savedTheme === 'dark' : true;
+    });
     const [startX, setStartX] = useState(0);
     const [startY, setStartY] = useState(0);
     const [isHorizontalSwipe, setIsHorizontalSwipe] = useState(true); // State to track swipe direction
 
     const toggleDarkMode = () => {
-        setIsDarkMode(!isDarkMode);
+        setIsDarkMode((currentMode) => {
+            const nextMode = !currentMode;
+            localStorage.setItem('portfolio-theme', nextMode ? 'dark' : 'light');
+            return nextMode;
+        });
     };
 
     const handleTouchStart = (e) => {
@@ -26,7 +33,6 @@ const Slider = () => {
         const diffY = e.touches[0].clientY - startY;
         // Calculate swipe angle
         const angle = Math.abs(diffY / diffX);
-        console.log("angle", angle);
         if (angle>(1.732)) { // Adjusted to determine steepness
             setIsHorizontalSwipe(false); // If swipe angle is too steep, treat it as a vertical swipe
         }else{
@@ -43,7 +49,7 @@ const Slider = () => {
             <div
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
-                className={`flex flex-col justify-between h-full w-full ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'} px-4 lg:px-20 overflow-y-auto`}
+                className={`flex flex-col justify-between h-full w-full ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-50'} px-4 lg:px-20 overflow-y-auto`}
             >
                 {/* First slide: Profile Sidebar and BentoLayout */}
                 <div className="flex flex-col lg:flex-row w-full items-center max-w-7xl mx-auto gap-4 flex-grow">
@@ -63,7 +69,7 @@ const Slider = () => {
             </div>
 
             {/* Second slide: Education Section */}
-            <div className={`flex justify-center items-center h-full w-full ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-black'}`}>
+            <div className={`flex justify-center items-center h-full w-full ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-50'}`}>
                 <Education isDarkMode={isDarkMode} />
             </div>
         </AwesomeSlider>

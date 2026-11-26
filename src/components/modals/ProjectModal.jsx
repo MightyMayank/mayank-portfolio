@@ -1,10 +1,9 @@
-import React,{useState} from "react";
+import React from "react";
 import { project } from "../constants/project";
 import cross from "../../assets/cross.svg";
 import Project from "./Project";
 
 const ProjectModal = (props) => {
-  console.log("props", props);
   const isDarkMode = props?.mode;
   
   return (
@@ -41,7 +40,7 @@ const ProjectModal = (props) => {
                   : "bg-white hover:bg-blue-100 border-gray-200"
               } transition-all duration-200 ease-in-out p-4 border rounded-lg shadow-sm`}
             >
-              <Project proj={proj} index={index} />
+              <Project proj={proj} index={index} isDarkMode={isDarkMode} />
             </div>
           ))}
         </div>

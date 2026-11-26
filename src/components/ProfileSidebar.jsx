@@ -3,8 +3,6 @@ import { TypeAnimation } from 'react-type-animation';
 import { name, skills, title } from '../profileconfig';
 
 const ProfileSidebar = ({ isDarkMode }) => {
-  // const isDarkMode = props.isDarkMode;
-
   // Convert your existing skills array (from react-typical format)
   // to the format react-type-animation expects.
   // react-type-animation expects: ['text', duration, 'next text', duration, ...]
@@ -20,7 +18,7 @@ const ProfileSidebar = ({ isDarkMode }) => {
       <h1 className={`text-4xl font-bold ${isDarkMode ? 'text-white' : 'text-black'}`}>
         {name}
       </h1>
-      <p className="text-xl lg:text-2xl font-light mb-4">{title}</p>
+      <p className={`text-xl lg:text-2xl font-light mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>{title}</p>
 
       <p className={`text-xl lg:text-2xl ${isDarkMode ? 'text-white' : 'text-black'}`}>
         <TypeAnimation
