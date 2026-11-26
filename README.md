@@ -1,71 +1,53 @@
-# Opensource Portfolio Customizable to any Profile ~ Bento Style
+# Mayank Portfolio
 
-## Have a min to have a portfolio?! Here is your chance to make one
+Personal portfolio website for **Mayank Rathore**, Full Stack Developer and Founder.
 
-![image](https://github.com/user-attachments/assets/77a651d1-0da0-4472-8371-76cfda3d2844)
+## 📋 About This Project
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new?repository=https://github.com/kingsmen732/portfolio) # Fork this into your GitHub so this deploy button works in your repo
+This is my personal portfolio built with **React**, **Vite**, and **Tailwind CSS**. It showcases my skills, education, projects, and provides a way for recruiters and clients to contact me.
 
-Hello there! Welcome to my new portfolio. This is your chance to get your last-minute savior bento-styled portfolio!
+## ✨ Features
 
-This project was kick-started with [Create React App](https://github.com/facebook/create-react-app), and I'm diving back into React after a good long break. So, 🚨 **please don't hate me if things look a bit rusty!** There's plenty of room for improvement, and I'm all ears for any suggestions.
+- **Contact Form** - Integrated with FormSpark for receiving submissions
+- **Responsive Design** - Works on mobile, tablet, and desktop
+- **Dark/Light Mode** - Automatically adapts to system preferences
+- **Modal-Based Contact** - Contact form opens in a sleek modal dialog
+- **Full Timeline** - Education, experience, and skills timeline
+- **Project Showcase** - Interactive project cards with details
 
-## How to Install
+## 🛠️ Built With
 
-To get this project up and running on your local machine, follow these steps:
+- React 18 + Vite
+- Tailwind CSS for styling
+- React Router for navigation
+- FormSpark for contact form submissions
 
-1. **Clone the repository:**
+## 📬 Contact Me
 
-   ```bash
-   git clone https://github.com/kingsmen732/portfolio
-   cd portfolio
-   ```
+<form action="https://submit-form.com/KwX8vqj4C" method="POST" style="display:none;">
+  <input type="text" name="name" id="contactName" required />
+  <input type="email" name="email" id="contactEmail" required />
+  <textarea name="message" id="contactMessage" rows="3" required></textarea>
+  <button type="submit">Send</button>
+</form>
 
-2. **Install the dependencies:**
+- **Email**: mayankrathore2904@gmail.com
+- **GitHub**: [MightyMayank](https://github.com/MightyMayank)
+- **LinkedIn**: [Mayank Rathore](https://www.linkedin.com/in/mayank-rathore-528699249/)
+- **LeetCode**: [Mayank_Rathore009](https://leetcode.com/u/Mayank_Rathore009/)
 
-   ```bash
-   npm install
-   ```
+## 🚀 Live Demo
 
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-   This will run the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page will automatically reload if you make edits. You'll also see any lint errors in the console.
+*(Add your deployment link here once you host it)*
 
-## SpeedRUN to Make it Your Website with Your Details
+## 📝 FormSpark Integration
 
-### Configuration
+The contact form uses [FormSpark](https://submit-form.com) as the backend service. Submissions are sent to `https://submit-form.com/KwX8vqj4C` and can be viewed in your FormSpark dashboard.
 
-You can easily change your details through the `profileConfig` file. Here’s how:
+1. Set up email notifications in FormSpark to receive submissions at `mayankrathore2904@gmail.com`
+2. View all submissions at [submit-form.com](https://submit-form.com)
+3. Free tier available with basic features
 
-1. **Open the `profileConfig.js` file:**
+---
 
-   - Locate the file in the `src/config` directory.
-   - Edit the links with your respective links.
-
-2. **Upload Resume**
-
-   - Update the resume container with different versions of your resume
-   - Make the final update with "RESUME.pdf".
-
-3. **Update your pictures**
-   - Replace the profile image `src\assets\profile.png`
-   - Add your personal favourite image at `src\assets\setup.jpg`
-
-## Room for Improvement
-
-Here's what I'm planning to work on:
-
-- Enhancing the grid layout.
-- Improving responsiveness on mobile devices.
-- Adding more content...
-- And much, much more!
-
-Feel free to fork this repository, create your own version, and contribute back with Pull Requests. Any help to make this better is greatly appreciated!
-
-Thanks for stopping by, and happy coding!
-
-## License
-
-This project is licensed under the [MIT License](LICENSE.txt)
+*Portfolio developed with ❤️ by Mayank Rathore*
